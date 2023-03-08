@@ -1,0 +1,73 @@
+/* .html{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+} */
+
+#container {
+    display: flex;
+}
+
+#navdiv{
+    max-width: 150px;
+    width: 30%;
+    height: 100%; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #191718;
+    z-index: 1;
+}
+
+#navbar {
+    max-width: 150px;
+    width: 30%; /* Set the width of the nav bar */
+    height: 100%; /* Set the height of the nav bar */
+    background-color: #191718; /* Set the background color of the nav bar */
+    position: fixed; /* Set the position to fixed so that it stays in place */
+    top: 0; /* Set the top position to 0 */
+    left: 0; /* Set the left position to 0 */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+
+#navbar a {
+    max-width: 150px;
+    display: block; /* Set the display to block so that each link takes up the full width of the nav bar */
+    color: #AAAAAA; /* Set the color of the links */
+    text-decoration: none; /* Remove the underline from the links */
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 16px; /* Set the font size of the links */
+    line-height: 44px;
+    height: 44px;
+    padding-left: 16px;
+    border-bottom: 1px solid #424142;
+}
+
+#navbar a.active {
+    color: white; 
+} 
+
+/* Style for the hover effect */
+#navbar a:hover {
+    background-color: #5C5C5C; /* Set the background color of the link when hovered */
+    color: white; /* Set the color of the link when hovered */
+}
+
+#body {
+    position: relative;
+    flex-grow: 1;
+    height: 100%;
+    display: block;
+}
+
+
+#img-logo {
+    margin-left: 40%;
+    position: absolute;
+    width: 310px;
+    height: 122px;
+    flex-grow: 1;
+}   
