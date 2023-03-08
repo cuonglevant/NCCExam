@@ -1,73 +1,201 @@
-/* .html{
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-} */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
-#container {
-    display: flex;
-}
+* { box-sizing: border-box; }
 
-#navdiv{
-    max-width: 150px;
-    width: 30%;
-    height: 100%; 
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #191718;
-    z-index: 1;
-}
+    html, body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
 
-#navbar {
-    max-width: 150px;
-    width: 30%; /* Set the width of the nav bar */
-    height: 100%; /* Set the height of the nav bar */
-    background-color: #191718; /* Set the background color of the nav bar */
-    position: fixed; /* Set the position to fixed so that it stays in place */
-    top: 0; /* Set the top position to 0 */
-    left: 0; /* Set the left position to 0 */
-    overflow-x: hidden; /* Hide horizontal scrollbar */
-}
+    #container {
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        margin-left: auto;
+        
+        overflow: hidden;
+    }
 
+    #navdiv {
+        max-width: 11%;
+        width: 150px;    
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #191718;
+    }
 
-#navbar a {
-    max-width: 150px;
-    display: block; /* Set the display to block so that each link takes up the full width of the nav bar */
-    color: #AAAAAA; /* Set the color of the links */
-    text-decoration: none; /* Remove the underline from the links */
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    font-size: 16px; /* Set the font size of the links */
-    line-height: 44px;
-    height: 44px;
-    padding-left: 16px;
-    border-bottom: 1px solid #424142;
-}
-
-#navbar a.active {
-    color: white; 
-} 
-
-/* Style for the hover effect */
-#navbar a:hover {
-    background-color: #5C5C5C; /* Set the background color of the link when hovered */
-    color: white; /* Set the color of the link when hovered */
-}
-
-#body {
-    flex-grow: 1;
-    height: 100%;
-    width: 100%;    
-    display: block;
-}
+    #navbar {
+        max-width: 150px;
+        width: 100%;
+        height: 100%;
+        background-color: #191718;
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow-x: hidden;
+    }
 
 
-#img-logo {
-    margin-left: 40%;
-    position: absolute;
-    width: 310px;
-    height: 122px;
-    flex-grow: 1;
-}   
+    #navbar a {
+        max-width: 150px;
+        display: block;
+        color: #AAAAAA;
+        text-decoration: none;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 44px;
+        height: 44px;
+        padding-left: 16px;
+        border-bottom: 1px solid #424142;
+    }
+
+    #navbar a.active {
+        color: white;
+    }
+
+
+    #navbar a:hover {
+        background-color: #5C5C5C;
+        color: white;
+    }
+
+    #main-container {
+        width: 89%;
+        height: 130px;
+        margin: 0 auto;
+        margin-left: auto;
+        margin-right: 0;
+        margin-top: 20px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #img-logo {
+        position: relative;
+        /* remove the top, left, and transform properties */
+    }
+    #info-container{
+        width: 89%;
+        height: fit-content;
+        margin: 0 auto;
+        margin-left: auto;
+        margin-right: 0;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #main-info{
+        text-align: center;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 30px;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #EFEFEF;
+    }
+    #info-title{
+        width: 241px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 21.09px;
+        color: #000000;
+        position: relative;
+        width: 70%;
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+    }
+    #detail-info{
+        width: 70%;
+        margin-bottom: 30px;
+    }
+    #detail-info span{
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 18.75px;
+        color: #000000;
+        justify-content: center;
+    }
+    .wrapper {
+        padding: 5px;
+        max-width: 960px;
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    
+    #content {
+        width: 80%;
+        justify-content: center;
+        display: flex;
+    }
+    .columns {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+    
+    .column {
+        flex: 1;
+        margin: 2px;
+        padding: 10px;
+
+    }
+    
+    footer {
+        padding: 0 15px;
+    }
+    
+    
+    @media screen and (max-width: 980px) {
+    }
+    
+    @media screen and (max-width: 680px) {
+        .columns .column {
+            flex-basis: 100%;
+            margin: 0 0 5px 0;
+        }
+    }
+    #footer{
+        width: 100%;
+        height: 100px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    #copyright{
+        width: 100%;
+        height: 79px;
+        border:#191718 solid 1px;
+        margin-left: auto;
+        margin-right: 0;
+        margin-top: 20px;
+        position: relative;
+        display: flex;
+        font: Roboto;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 18.75px;
+    }
+    #copyright p{
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: 20%;
+    }
